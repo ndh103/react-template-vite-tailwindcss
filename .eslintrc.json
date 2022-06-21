@@ -6,7 +6,10 @@
     "extends": [
         "plugin:react/recommended",
         "airbnb",
-        "plugin:@typescript-eslint/recommended"
+        "plugin:@typescript-eslint/recommended",
+        "prettier",
+        //eslint-plugin-prettier, Recommended settings
+        "plugin:prettier/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -19,9 +22,18 @@
     "plugins": [
         "react",
         "@typescript-eslint",
-        "react-hooks"
+        "react-hooks",
+        "prettier"
     ],
     "rules": {
+        // eslint-plugin-prettier, use prettier rules inside Eslint as error, setting to use prettierrc
+        "prettier/prettier": [
+            "error",
+            {},
+            {
+                "usePrettierrc": true
+            }
+        ],
         "react/react-in-jsx-scope": "off",
         "no-use-before-define": "off",
         "@typescript-eslint/no-use-before-define": [
@@ -76,6 +88,12 @@
             }
         ],
         "@typescript-eslint/no-non-null-assertion": "off",
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                "devDependencies": true
+            }
+        ],
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn"
     },
