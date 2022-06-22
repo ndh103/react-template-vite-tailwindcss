@@ -6,10 +6,12 @@ React template project with vite and tailwindcss
 - [x] Eslint, Prettier
   - Using the [tutorial](https://javascript.plainenglish.io/setting-eslint-and-prettier-on-a-react-typescript-project-2021-22993565edf9)
 - [x] Routing using [react router](https://reactrouter.com/)
-- [ ] CSS solution inside the project
-  - [ ] TailwindCSS as CSS Library
-  - [ ] How to add scoped component CSS in React
+- [x] TailwindCSS as CSS Library
+- [ ] Add website layout
+  - [ ] Add main layout
+  - [ ] Add secondary layout
 - [ ] Making Http call using [Axios](https://github.com/axios/axios)
 - [ ] [Mirage](https://miragejs.com/) - mock http api result for testing and development usage
 - [ ] State management using React Hooks
 - [ ] Add tests
+- [ ] Refine project structure
