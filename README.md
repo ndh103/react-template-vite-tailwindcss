@@ -15,3 +15,5 @@ React template project with vite and tailwindcss
 - [ ] State management using React Hooks
 - [ ] Add tests
 - [ ] Refine project structure
+  - https://viblo.asia/p/di-tim-chiec-structure-hoan-hao-cho-ung-dung-react-Az45b41NZxY
+  - https://reactjs.org/docs/faq-structure.html
