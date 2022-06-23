@@ -5,7 +5,7 @@ import {
   useLocation,
   useSearchParams,
 } from 'react-router-dom'
-import { getInvoices } from './data'
+import { getInvoices } from '../../ultils/data'
 
 function QueryNavLink({ to, ...props }: NavLinkProps): JSX.Element {
   const location = useLocation()

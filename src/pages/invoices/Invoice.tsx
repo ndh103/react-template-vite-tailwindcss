@@ -1,5 +1,5 @@
 import { useParams, useNavigate, useLocation } from 'react-router-dom'
-import { getInvoice, deleteInvoice } from './data'
+import { getInvoice, deleteInvoice } from '../../ultils/data'
 
 export default function Invoice() {
   const navigate = useNavigate()

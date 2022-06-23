@@ -1,15 +1,6 @@
-import Expenses from './home/expenses'
-import Home from './home/home'
-import Invoice from './home/invoice'
-import Invoices from './home/invoices'
-
-function InvoiceIndex() {
-  return (
-    <main style={{ padding: '1rem' }}>
-      <p>Select an invoice</p>
-    </main>
-  )
-}
+import homeRoutes from './home/routes'
+import expensesRoutes from './expenses/routes'
+import invoicesRoutes from './invoices/routes'
 
 function NotFoundPath() {
   return (
@@ -20,25 +11,9 @@ function NotFoundPath() {
 }
 
 const routes = [
-  { path: '/', element: <Home /> },
-  {
-    path: '/expenses',
-    element: <Expenses />,
-  },
-  {
-    path: '/invoices',
-    element: <Invoices />,
-    children: [
-      {
-        index: true,
-        element: <InvoiceIndex />,
-      },
-      {
-        path: ':invoiceId',
-        element: <Invoice />,
-      },
-    ],
-  },
+  ...homeRoutes,
+  ...expensesRoutes,
+  ...invoicesRoutes,
   {
     path: '*',
     element: <NotFoundPath />,
