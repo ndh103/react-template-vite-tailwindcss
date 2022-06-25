@@ -1,6 +1,5 @@
 import homeRoutes from './home/routes'
-import expensesRoutes from './expenses/routes'
-import invoicesRoutes from './invoices/routes'
+import aboutRoutes from './about/routes'
 
 function NotFoundPath() {
   return (
@@ -12,8 +11,7 @@ function NotFoundPath() {
 
 const routes = [
   ...homeRoutes,
-  ...expensesRoutes,
-  ...invoicesRoutes,
+  ...aboutRoutes,
   {
     path: '*',
     element: <NotFoundPath />,
