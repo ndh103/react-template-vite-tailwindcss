@@ -1,9 +1,11 @@
-import { useEffect, useState } from 'react'
-import { TaskModel } from './api-services/taskModel'
-import taskService from './api-services/taskService'
+import { useAppDispatch, useAppSelector } from '@/app/hooks'
+import { useEffect } from 'react'
+import taskService from '../api-services/taskService'
+import { loadTask, selectTasks } from '../tasksSlice'
 
 export default function Inbox() {
-  const [tasks, setTasks] = useState(new Array<TaskModel>())
+  const tasks = useAppSelector(selectTasks)
+  const dispatch = useAppDispatch()
 
   useEffect(() => {
     // declare the data fetching function
@@ -11,7 +13,7 @@ export default function Inbox() {
       const tasksData = await taskService.getAll()
 
       if (tasksData != null) {
-        setTasks(tasksData.data)
+        dispatch(loadTask(tasksData.data))
       }
     }
 

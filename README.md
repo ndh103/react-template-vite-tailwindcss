@@ -16,6 +16,6 @@ React template project with vite and tailwindcss
 - [x] Making Http call using [Axios](https://github.com/axios/axios)
 - [x] [Mirage](https://miragejs.com/) - mock http api result for testing and development usage
   - [x] Using [fakerjs](https://fakerjs.dev/) to generate fake data
-- [ ] Check why api are calling twice when using useEffect
-- [ ] State management using React Hooks
+- [x] State management using React Hooks + React Tookkit
+- [] Using React Tookit Query
 - [ ] Add tests

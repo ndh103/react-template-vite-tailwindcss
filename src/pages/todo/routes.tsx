@@ -1,12 +1,12 @@
 import { Navigate } from 'react-router-dom'
-import Home from './home'
-import Inbox from './inbox'
-import Today from './today'
+import TodoHome from './TodoHome'
+import Inbox from './inbox/Inbox'
+import Today from './today/Today'
 
 const routes = [
   {
     path: '/',
-    element: <Home />,
+    element: <TodoHome />,
     children: [
       { path: '/', index: true, element: <Navigate to="/today" replace /> },
       { path: '/today', element: <Today /> },
